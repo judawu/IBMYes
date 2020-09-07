@@ -38,7 +38,7 @@ clone_repo(){
     echo "进行安装。。。"
     cd ${SH_PATH}/wireguard-go
     ibmcloud target --cf
-    echo "N"|ibmcloud cf install
+    echo "Y"|ibmcloud cf install
     ibmcloud cf push
     echo "安装完成。"
    
