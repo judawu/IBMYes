@@ -11,8 +11,8 @@ create_mainfest_file(){
     IBM_MEM_SIZE=64
     fi
   
-    
-    cat >  ${SH_PATH}/IBMYes/wireguard-go-ibm/manifest.yml  << EOF
+    mkdir  ${SH_PATH}/wireguard-go-ibm
+    cat >  ${SH_PATH}/wireguard-go-ibm/manifest.yml  << EOF
     applications:
     - path: .
       name: ${IBM_APP_NAME}
@@ -33,7 +33,7 @@ clone_repo(){
 
  install(){
     echo "进行安装。。。"
-    cd ${SH_PATH}/IBMYes/wireguard-go-ibm
+    cd ${SH_PATH}/wireguard-go-ibm
     ibmcloud target --cf
     echo "N"|ibmcloud cf install
     ibmcloud cf push
