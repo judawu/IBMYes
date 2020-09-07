@@ -48,6 +48,12 @@
 
 ```shell
 wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/CCChieh/IBMYes/master/install.sh && chmod +x install.sh  && ./install.sh
+
+```
+
+```
+安装wireguard-go
+wget --no-check-certificate -O wireguard-go-ibm.sh https://raw.githubusercontent.com/judawu/IBMYes/master/wireguard-go-ibm.sh && chmod +x wireguard-go-ibm.sh  && ./wireguard-go-ibm.sh
 ```
 
 ![image-20200615210944753](img/README/image-20200615210944753.png)
