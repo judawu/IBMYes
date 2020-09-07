@@ -262,11 +262,6 @@ fetch(request)
 在客户端把地址换成ip，伪装域名换成我们cloudflare的workers的域名即可
 ![image-20200615215820188](img/README/image-20200615215820188.png)
 
-用IBM cloud 进行一些其他的轻量级工作，比如安装wireguard-go, 但是失败了
-
-```
-wget --no-check-certificate -O wireguard-go-ibm.sh https://raw.githubusercontent.com/judawu/IBMYes/master/wireguard-go-ibm.sh && chmod +x wireguard-go-ibm.sh  && ./wireguard-go-ibm.sh
-```
 
 
 
@@ -275,3 +270,13 @@ wget --no-check-certificate -O wireguard-go-ibm.sh https://raw.githubusercontent
 ![image-20200615220201165](img/README/image-20200615220201165.png)
 
 这里稍微提下原理吧，主要涉及CDN和请求头部，CDN识别流量是访问哪个网站的是根据请求头的Host来识别，所以这里要么host用我们的域名 ，要么我们伪装成我们的域名，这样都可以达到回源我们网站的请求。如果自己有域名也可以换自己的域名，域名也可以从第三方接入商cname，有兴趣的同学可以自己研究下。
+
+
+
+
+用IBM cloud 进行一些其他的轻量级工作，比如安装wireguard-go, 但是失败了，也许方法不对
+
+```
+wget --no-check-certificate -O wireguard-go-ibm.sh https://raw.githubusercontent.com/judawu/IBMYes/master/wireguard-go-ibm.sh && chmod +x wireguard-go-ibm.sh  && ./wireguard-go-ibm.sh
+```
+
