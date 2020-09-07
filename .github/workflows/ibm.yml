@@ -34,7 +34,9 @@ jobs:
         INSTANCE_ID: ${{ secrets.INSTANCE_ID }} 
       run: |
         ./IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID" 
-        ./IBM_Cloud_CLI/ibmcloud target --cf
+        ./IBM_Cloud_CLI/ibmcloud target --cf <<EOF
+        $INSTANCE_ID
+        EOF 
         
       
        
