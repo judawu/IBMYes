@@ -29,6 +29,7 @@ clone_repo(){
   rm -rf wireguard-go
   git clone https://git.zx2c4.com/wireguard-go
   cd wireguard-go
+  chmod 0755 ./* 
   make
    echo "初始化完成。"
 }
