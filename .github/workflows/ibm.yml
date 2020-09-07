@@ -37,7 +37,7 @@ jobs:
         ./IBM_Cloud_CLI/ibmcloud target --cf <<EOF 
         $INSTANCE_ID
         EOF
-        ./IBM_Cloud_CLI/ibmcloud cf install -f -v 6.15.0
+        ./IBM_Cloud_CLI/ibmcloud cf install -f -v 6.51.0
         
         
       
