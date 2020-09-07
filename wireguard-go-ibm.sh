@@ -12,8 +12,8 @@ create_mainfest_file(){
     fi
   
     
-    cd ${SH_PATH}/wireguard-go-ibm
-    cat >  ${SH_PATH}/wireguard-go-ibm/manifest.yml  << EOF
+    cd ${SH_PATH}/wireguard-go/
+    cat >  ${SH_PATH}/wireguard-go/manifest.yml  << EOF
     applications:
     - path: .
       name: ${IBM_APP_NAME}
@@ -25,8 +25,7 @@ EOF
 
 clone_repo(){
   echo "进行初始化。。。"
-  mkdir  ${SH_PATH}/wireguard-go-ibm
-  cd  ${SH_PATH}/wireguard-go-ibm
+  cd  ${SH_PATH}
   rm -rf wireguard-go
   git clone https://git.zx2c4.com/wireguard-go
   cd wireguard-go
@@ -36,7 +35,7 @@ clone_repo(){
 
  install(){
     echo "进行安装。。。"
-    cd ${SH_PATH}/wireguard-go-ibm
+    cd ${SH_PATH}/wireguard-go
     ibmcloud target --cf
     echo "N"|ibmcloud cf install
     ibmcloud cf push
