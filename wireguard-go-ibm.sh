@@ -11,7 +11,8 @@ create_mainfest_file(){
     IBM_MEM_SIZE=64
     fi
   
-    mkdir  ${SH_PATH}/wireguard-go-ibm
+    
+    cd ${SH_PATH}/wireguard-go-ibm
     cat >  ${SH_PATH}/wireguard-go-ibm/manifest.yml  << EOF
     applications:
     - path: .
@@ -24,7 +25,9 @@ EOF
 
 clone_repo(){
   echo "进行初始化。。。"
-	rm -rf wireguard-go
+  mkdir  ${SH_PATH}/wireguard-go-ibm
+  cd  ${SH_PATH}/wireguard-go-ibm
+  rm -rf wireguard-go
   git clone https://git.zx2c4.com/wireguard-go
   cd wireguard-go
   make
