@@ -12,7 +12,7 @@ create_mainfest_file(){
     fi
   
     
-    cd ${SH_PATH}/wireguard-go/
+    cd ${SH_PATH}/wireguard-go
     cat >  ${SH_PATH}/wireguard-go/manifest.yml  << EOF
     applications:
     - path: .
