@@ -51,10 +51,7 @@ wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/CCCh
 
 ```
 
-```
-安装wireguard-go
-wget --no-check-certificate -O wireguard-go-ibm.sh https://raw.githubusercontent.com/judawu/IBMYes/master/wireguard-go-ibm.sh && chmod +x wireguard-go-ibm.sh  && ./wireguard-go-ibm.sh
-```
+
 
 ![image-20200615210944753](img/README/image-20200615210944753.png)
 
@@ -263,8 +260,15 @@ fetch(request)
 这里假设我获取的最优ip是`104.17.188.91`
 
 在客户端把地址换成ip，伪装域名换成我们cloudflare的workers的域名即可
-
 ![image-20200615215820188](img/README/image-20200615215820188.png)
+
+用IBM cloud 进行一些其他的轻量级工作，比如安装wireguard-go, 但是失败了
+
+```
+wget --no-check-certificate -O wireguard-go-ibm.sh https://raw.githubusercontent.com/judawu/IBMYes/master/wireguard-go-ibm.sh && chmod +x wireguard-go-ibm.sh  && ./wireguard-go-ibm.sh
+```
+
+
 
 如果不方便用电脑优选ip也可以把地址设为`cloudflare.com`或`icook.tw`,这两个一个cloudflare官网，自然也是使用自家cdn，另外一家是台湾省的一个网站，域名指向的ip一般也是比较好的线路。
 
